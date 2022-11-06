@@ -1,7 +1,7 @@
 
 class App:
     def __init__(self, name):
-        pass
+        self.name = name
 
     def execute(self):
         pass
