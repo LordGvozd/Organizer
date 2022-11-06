@@ -9,8 +9,9 @@
 
 import tkinter as tk
 
+from Apps import App
 
-class Launcher():
+class Launcher:
     
     
     def execute(self):
