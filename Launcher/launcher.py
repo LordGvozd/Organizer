@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 
 Используется для запуска программ,
@@ -9,35 +8,39 @@
 
 import tkinter as tk
 
+from Apps import App
+
+# Подпрограммы
+from Apps.TimeApps import Watch
+
 
 class Launcher():
     
     
     def execute(self):
         
-        root = tk.Tk()
-        root.title("Organizer Launcher v0.1")
-        root.geometry("480x480+800+200")
-        root.resizable(False, False)
+        self.root = tk.Tk()
+        self.root.title("Organizer Launcher v0.1")
+        self.root.geometry("480x480+800+200")
+        self.root.resizable(False, False)
         
-        root.mainloop()
+        self.root.mainloop()
         
     
-    def add_app(self):
+    def add_app(self, app: App):
         
-        self.add_button()
+        self.add_button(name=app.name, execute=app.execute)
     
     
-    def add_button(self, image_filename, text):
-        pass
+    def add_button(self, image_filename, name, execute):
+        
+        app_button = tk.Button(self.root, text=f"{name}")
 
 if __name__ == "__main__":
     launcher = Launcher()
     
+    watch = Watch()
+    
+    launcher.add_app(Watch)
     
     launcher.execute()
-=======
-
-
-
->>>>>>> 3dba5b9e4579b08a628826f9ab7bceeee4450c49
