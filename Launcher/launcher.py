@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """
 
 Используется для запуска программ,
@@ -21,23 +21,17 @@ class Launcher():
         root.resizable(False, False)
         
         root.mainloop()
-        
-    
+
     def add_app(self):
         
         self.add_button()
-    
-    
+
     def add_button(self, image_filename, text):
         pass
 
+
 if __name__ == "__main__":
     launcher = Launcher()
-    
-    
+
     launcher.execute()
-=======
 
-
-
->>>>>>> 3dba5b9e4579b08a628826f9ab7bceeee4450c49
